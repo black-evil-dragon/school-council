@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <div class="container-fluid error-block" style="height: 80%">
+        <div style="position: relative; margin: auto">
+            <h2>{% block title_error %}{% endblock title_error %}</h2>
+            <p class="fs-24">{% block text_error %}{% endblock text_error %}</p>
+            <p><span style="text-decoration: underline;">Код ошибки "{% block code %}{% endblock code %}".</span> Возврат на <a href="/">главную страницу</a></p>
+        </div>
+    </div>
+{% endblock content %}

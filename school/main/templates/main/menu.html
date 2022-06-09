@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}Меню{% endblock title %}
+
+{% block content %}
+<div class="block-menu container-fluid">
+    <div class="list-options smooth-onset-2s">
+        <!-- level 1 -->
+        <div class="level-1 options group-options active">
+            <input type="button" value="Новости" onclick="document.location.href = '/news';" class="mobile"><br>
+
+            <input type="button" value="Сведения об организации" onclick="showOptions('.options', '.level-2.options-1')"><br>
+            <!--
+                <input type="button" value="Состав совета" onclick="/**/"><br>
+                <input type="button" value="Информация для родителей" onclick="/**/"><br>
+            -->
+            <input type="button" value="Учебный процесс" onclick="showOptions('.options', '.level-2.options-4')"><br>
+            <input type="button" value="Связаться" onclick="/**/"><br>
+
+        </div>
+
+        <!-- level 2 -->
+
+        <div class="level-2 options-1 group-options">
+            <input type="button" value="Школа №30" onclick="document.location.href = '/school/about';"><br>
+            <input type="button" value="Состав ШУСС" onclick="document.location.href = '/ghost';"><br>
+            <input type="button" value="Документы" onclick="/**/"><br>
+            <input type="button" value="Информация для родителей" onclick="/**/"><br>
+            <input type="button" value="Назад" onclick="showOptions('.level-2.options-1', '.options')"><br>
+        </div>
+
+        <div class="level-2 options-4 group-options">
+            <input type="button" value="Расписание" onclick="showOptions('.level-2.options-4', '.level-3.options-1')"><br>
+            <input type="button" value="Олимпиады" onclick=""><br>
+            <input type="button" value="Мероприятия" onclick=""><br>
+            <!--<input type="button" value="Профильные классы" onclick="showOptions('.level-2.options-4', '.level-3.options-3')"><br>-->
+            <input type="button" value="Назад" onclick="showOptions('.level-2.options-4', '.options')"><br>
+        </div>
+
+        <!-- level 3 -->
+
+        <div class="level-3 options-1 group-options">
+            <input type="button" value="Расписание звонков" onclick=""><br>
+            <input type="button" value="Расписание уроков" onclick=""><br>
+            <input type="button" value="Назад" onclick="showOptions('.level-3.options-1', '.level-2.options-4')"><br>
+        </div>
+
+        <!--
+            <div class="level-3 options-3 group-options">
+                <input type="button" value="Технологический профиль" onclick=""><br>
+                <input type="button" value="Соц-экономический профиль" onclick=""><br>
+                <input type="button" value="Назад" onclick="showOptions('.level-3.options-3', '.level-2.options-4')"><br>
+            </div>
+        -->
+    </div>
+</div>
+{% endblock content %}
