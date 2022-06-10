@@ -67,8 +67,6 @@ h1, h2, h3, h4, h5, p, a, input {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     transition: all 1s;
-    width: 50%;
-    height: 35%;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
@@ -81,6 +79,9 @@ h1, h2, h3, h4, h5, p, a, input {
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;
+
+    width: 50%;
+    height: max-content;
 }
 .windowContent h3 {
     text-align: center;
