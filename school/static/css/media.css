@@ -315,6 +315,26 @@
 		width: 80%;
 	}
 
+	.modalWindow {
+		width: 50%;
+    	height: max-content;
+	}
+	.windowContent h3 {
+		text-align: center;
+		padding: 2.5%;
+	}
+	.windowContent p {
+		padding: 0 5% 0;
+	}
+	/* Не знаю почему не работает
+	.windowContent > p:last-child {
+		padding-bottom: 2.5%;
+	}*/
+
+	.btn-mw-close {
+		top: 7%;
+		right: 2%;
+	}
 
 	.link {
 		width: 180px;
@@ -574,6 +594,9 @@
 	}
 }
 @media screen and (max-width: 820px){
+	.modalWindow {
+		width: 70%;
+	}
 	span.news-creator {
 		font-size: 14px;
 	}
