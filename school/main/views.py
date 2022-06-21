@@ -8,6 +8,9 @@ def index(request):
     news = Post.objects.order_by('-id')[:1]
     return render(request, 'main/index.html', {'post': news})
 
+def index(request):
+    return render(request, 'main/index.html')
+
 def about(request):
     return render(request, 'main/school/about.html')
 
