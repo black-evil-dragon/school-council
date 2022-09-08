@@ -27,33 +27,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta class="eggs" ghost="«Со своим предсмертным дыханием Странник создал Призраков...Чтобы найти тех, кто может использовать его Свет как оружие. Стражей, чтобы защитить нас, и делать то, что сам Странник больше не может».">
 </head>
-<body id="top">
+<body id="top" class="app">
 
-    <div class="container-fluid nav-links">
-        <div id="first" class="link mobile mobile-2">
+    <div class="app__navigation nav-links container-fluid">
+        <div id="first" class="app__navigation-link link mobile mobile-2">
             <a id="nav-link" href="/">Главная</a>
         </div>
 
-        <div class="link mobile-2">
+        <div class="app__navigation-link link mobile-2">
             <a id="nav-link" href="/news">Новости</a>
         </div>
 
-        <div class="link mobile mobile mobile-2">
+        <div class="app__navigation-link link mobile mobile mobile-2">
             <!--<a id="nav-link" href="/menu">Меню</a>-->
             <input type="button" value="Меню" class="btn-menu-head" id="nav-link">
         </div>
 
-        <div class="link">
+        <div class="app__navigation-link link">
             <a id="nav-link" href="/school/about">О школе</a>
         </div>
 
-        <div id="last" class="link mobile-2">
+        <div id="last" class="app__navigation-link link mobile-2">
             <!--<a id="nav-link" href="">Связаться</a>-->
             <input type="button" value="Связаться" class="" id="nav-link" onclick="showModalWindow()">
         </div>
     </div>
-    <div class="panel-menu-head">
-        <div class="block-menu container-fluid">
+    <div class="app__menu panel-menu-head">
+        <div class="app__menu-content block-menu container-fluid">
             <div class="list-options smooth-onset-2s">
                 <!-- level 1 -->
                 <div class="level-1 options group-options active">
@@ -105,8 +105,8 @@
         </div>
     </div>
 
-    <div class="bg-mWindow">
-        <div class="modalWindow">
+    <div class="app__modal bg-mWindow">
+        <div class="app__modal-content modalWindow">
             <div class="windowContent">
                 <h3>Контакты</h3>
                 <p>Председатель: Руслан Копейкин<br>Телефон: +7 (960) 297-19-27<br>E-mail: <input type="button" value="ruslankopeikin@yandex.ru" onclick=""><br>VK: <a href="https://vk.com/rusyakopeykin">https://vk.com/rusyakopeykin</a></p>

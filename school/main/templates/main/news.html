@@ -5,12 +5,12 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="block-news smooth-onset-1s">
-        <div class="list-news">
+    <div class="news block-news smooth-onset-1s">
+        <div class="news__list list-news">
             {% if post %}
                 {% for news in post %}
-                    <div class="content-news">
-                        <p class="news-info">
+                    <div class="news__post content-news">
+                        <p class="news__post-info news-info">
                             <span class="news-creator">{{ news.creator }}</span>
                             <span class="news-time">
                                 {{ news.time }}

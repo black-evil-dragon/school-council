@@ -18,16 +18,16 @@
         </div>
     </div>
 
-    <div class="container-fluid news-block">
-        <div class="news-title txt-center">
+    <div class="news container-fluid news-block">
+        <div class="news__title news-title txt-center">
             <h2>Новости</h2>
         </div>
 
         <div>
             {% if post %}
                 {% for news in post %}
-                    <div class="content-news">
-                        <p class="news-info">
+                    <div class="news__content content-news">
+                        <p class="news__content-info news-info">
                             <span class="news-creator">{{ news.creator }}</span>
                             <span class="news-time">
                                 {{ news.time }}
@@ -51,13 +51,13 @@
 
         </div>
 
-        <div class="news-btn txt-center">
+        <div class="news__button news-btn txt-center">
             <a href="news">Показать ещё</a>
         </div>
     </div>
-    <div class="container-fluid contact-block">
+    <div class="contacts container-fluid contact-block">
         <div class="row">
-            <div class="col-6 contact-content">
+            <div class="contacts__content col-6 contact-content">
                 <h3>Контакты</h3>
 
                 <p>Директор школы: Дорочинская Светлана Владимировна<br>Телефон: (8172) 53-02-81<br>E-mail: svet-tsvet@yandex.ru</p>
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="col-3 contact-menu mobile">
+            <div class="contacts__link col-3 contact-menu mobile">
                 <a href="/">Главная</a><br>
                 <!--<a href="news">Новости</a><br>-->
                 <!--<a href="about">О школе</a><br>-->
