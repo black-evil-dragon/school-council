@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content='true' name='HandheldFriendly'>
+    <meta content='width' name='MobileOptimized'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Title & other -->
+    <title>{% block title %}{% endblock title %}</title>
+    <meta class="eggs"
+        ghost="«Со своим предсмертным дыханием Странник создал Призраков...Чтобы найти тех, кто может использовать его Свет как оружие. Стражей, чтобы защитить нас, и делать то, что сам Странник больше не может».">
+</head>
+
+<body id="top" class="app">
+
+    <div class="app__navigation">
+        <div class="app__navigation-link">
+            <a id="nav-link" href="/">Главная</a>
+        </div>
+
+        <div class="app__navigation-link">
+            <a id="nav-link" href="/news">Новости</a>
+        </div>
+
+        <div class="app__navigation-link">
+            <a href="">Меню</a>
+        </div>
+
+        <div class="app__navigation-link">
+            <a id="nav-link" href="/school/about">О школе</a>
+        </div>
+
+        <div class="app__navigation-link">
+            <a id="nav-link">Связаться</a>
+        </div>
+    </div>
+
+    <div class="app__content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <div class="app__transition"></div>
+</body>
+
+</html>

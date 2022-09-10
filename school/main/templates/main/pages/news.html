@@ -1,0 +1,39 @@
+{% extends 'main/template/base.html' %}
+{% load static %}
+{% block title %}
+Новости
+{% endblock title %}
+
+{% block content %}
+<div class="news">
+    <div class="news__list">
+        {% if post %}
+        {% for news in post %}
+        <div class="news__content">
+            <div class="news__content-info">
+                <p class="">
+                    {{ news.creator }}
+                    {{ news.time }}
+                    {{ news.date|date:"d.m.Y" }}
+                </p>
+            </div>
+            <div class="news__content-title">
+                <h2><a href="{% url 'post_detail' pk=news.id %}" class="title-link">{{ news.title }}</a></h2>
+            </div>
+            <div class="news__content-text">
+                <p>{{ news.content|linebreaks }}</p>
+            </div>
+
+            {% if news.image %}
+            <div class="news__content-image">
+                <img src="{{ news.image.url }}">
+            </div>
+            {% else %}
+            {% endif %}
+            <a href="" class="scrollTop">Наверх</a>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

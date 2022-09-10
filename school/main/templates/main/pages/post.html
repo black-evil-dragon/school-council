@@ -1,0 +1,36 @@
+{% extends 'main/template/base.html' %}
+{% load static %}
+{% block title %}
+{{ post.title }}
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="news">
+    <div class="news__content">
+        <div class="news__content-info">
+            <p class="">
+                {{ post.creator }}
+                {{ post.time }}
+                {{ post.date|date:"d.m.Y" }}
+            </p>
+        </div>
+        <div class="news__content-title">
+            <h2>{{ post.title }}</h2>
+        </div>
+        <div class="news__content-text">
+            <p>{{ post.content|linebreaks }}</p>
+        </div>
+
+        {% if post.image %}
+        <div class="news__content-image">
+            <img src="{{ post.image.url }}">
+        </div>
+        {% else %}
+        {% endif %}
+        <a href="" class="scrollTop">Наверх</a>
+    </div>
+</div>
+
+{% endblock content %}

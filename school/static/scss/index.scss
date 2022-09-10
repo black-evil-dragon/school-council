@@ -1,0 +1,62 @@
+@import './settings/colors';
+@import './settings/mixins';
+@import './settings/ui';
+@import './settings/font';
+
+@import './pages/index';
+@import './pages/news';
+@import './pages/school-about';
+
+
+body,
+html {
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+
+    scrollbar-width: thin;
+
+    //overflow: hidden;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.app {
+    &__navigation {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+
+        &-link {
+            padding: 2rem 1rem;
+
+            a {
+                color: $black;
+                @include smooth-underline;
+            }
+
+            &:first-child {
+                padding-left: 1.5rem;
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: end;
+                flex: 1;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+    &__content {}
+
+    &__transition {}
+}

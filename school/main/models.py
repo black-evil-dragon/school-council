@@ -38,3 +38,15 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
+
+class AboutSchool(models.Model):
+    id = models.PositiveIntegerField('Порядковый номер', primary_key=True, unique=True)
+    title = models.CharField('Заголовок', max_length=50)
+    content = models.TextField('Содержимое')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Описание школы'
+        verbose_name_plural = 'Описание школы'

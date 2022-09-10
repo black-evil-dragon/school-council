@@ -1,0 +1,21 @@
+{% extends "main/template/base.html" %}
+
+{% block content %}
+<div class="error">
+    <div class="error__title">
+        <h2>{% block title_error %}{% endblock title_error %}</h2>
+    </div>
+    <div class="error__content">
+        <div class="error__content-text">
+            <p>{% block text_error %}{% endblock text_error %}</p>
+        </div>
+        <div class="error__content-info">
+            <p>Код ошибки "{% block code %}{% endblock code %}".</p>
+        </div>
+        <div class="error__content-link">
+            <p> Возврат на <a href="/">главную страницу</a></p>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,46 @@
+.news {
+    &__title {
+        padding: 2.5rem 0 3rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        padding: 0 2.5rem;
+
+        &-info {
+            p {
+                span#creator {
+                    color: $black;
+
+                    font-size: 1.25rem;
+
+                    padding-right: 1rem;
+                }
+
+                span#time,
+                span#date {
+                    color: $grey-text;
+                }
+            }
+        }
+
+        &-title {
+            h2 {
+                a {
+                    color: black;
+
+                    @include smooth-underline;
+                }
+            }
+        }
+
+        &-text {}
+
+        &-image {}
+    }
+
+    &__button {}
+}

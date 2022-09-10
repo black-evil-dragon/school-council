@@ -1,0 +1,101 @@
+{% extends 'main/template/base.html' %}
+{% load static %}
+{% block title %}ШУСС Школы №30{% endblock title %}
+
+{% block content %}
+
+<div class="school">
+    <div class="school__title">
+        <h3>
+            ШУСС МОУ”СОШ” №30
+        </h3>
+    </div>
+    <div class="school__subtitle">
+        <h1>
+            Школьный ученический совет самоуправления
+        </h1>
+    </div>
+</div>
+
+<div class="info">
+    <div class="info__tilte"></div>
+    <div class="info__content">
+        <div class="info__content-text"></div>
+        <div class="info__content-image"></div>
+    </div>
+</div>
+
+<div class="news">
+    <div class="news__title">
+        <h2>Новости</h2>
+    </div>
+
+    {% if post %}
+    {% for news in post %}
+    <div class="news__content">
+        <div class="news__content-info">
+            <p>
+                <span id="creator">{{ news.creator }}</span>
+                <span id="time">{{ news.time }}</span>
+                <span id="date">{{ news.date|date:"d.m.Y" }}</span>
+            </p>
+        </div>
+        <div class="news__content-title">
+            <h2><a href="{% url 'post_detail' pk=news.id %}" class="title-link">{{ news.title }}</a></h2>
+        </div>
+        <div class="news__content-text">
+            <p>{{ news.content|linebreaks }}</p>
+        </div>
+
+        {% if news.image %}
+        <div class="news__content-image">
+            <img src="{{ news.image.url }}">
+        </div>
+        {% else %}
+        {% endif %}
+        <a href="" class="scrollTop">Наверх</a>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="news__button">
+        <a href="news">Показать ещё</a>
+    </div>
+</div>
+
+<div class="contacts">
+    <div class="contacts__title">
+        <h3>Контакты</h3>
+    </div>
+    <div class="contacts__content">
+
+        <div class="contacts__content-text">
+            <p>Директор школы: Дорочинская Светлана Владимировна
+                <br>Телефон: (8172) 53-02-81
+                <br>E-mail: svet-tsvet@yandex.ru
+            </p>
+            <p>Председатель: Руслан Копейкин
+                <br>Телефон: +7 (960) 297-19-27
+                <br>E-mail: ruslankopeikin@yandex.ru
+                <br>VK: <a href="https://vk.com/rusyakopeykin">https://vk.com/rusyakopeykin</a>
+            </p>
+            <p>Заместитель председателя: Влад Тараторин
+                <br>VK: <a href="https://vk.com/suzaku_ki">https://vk.com/suzaku_ki</a>
+            </p>
+
+            <div class="icon-link">
+                <a href="https://vk.com/samoypravlenie30"><img src="{% static 'img/vk-64.png' %}" alt=""></a>
+            </div>
+        </div>
+
+        <div class="contacts__link">
+            <a href="/">Главная</a><br>
+            <!--<a href="news">Новости</a><br>-->
+            <!--<a href="about">О школе</a><br>-->
+            <input type="button" value="Меню" class="btn-menu-footer scrollTop" id=""><br>
+            <a href="" class="scrollTop">Наверх</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

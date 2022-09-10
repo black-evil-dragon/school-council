@@ -1,0 +1,29 @@
+.contacts {
+    color: $white;
+    background-color: $grey-background;
+
+    padding: 1rem 2rem;
+
+    &__title {
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-text {
+            p {
+                a {
+                    color: $white;
+                }
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__link {}
+}
