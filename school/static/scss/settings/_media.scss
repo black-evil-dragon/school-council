@@ -1,0 +1,173 @@
+body,
+html {
+    @include media-breakpoint-max(fhd) {
+        font-size: 25px;
+    }
+
+    @include media-breakpoint-max(xxl) {
+        font-size: 20px;
+    }
+
+    @include media-breakpoint-max(xl) {
+        font-size: 18px;
+    }
+
+    @include media-breakpoint-max(lg) {
+        font-size: 15px;
+    }
+
+    @include media-breakpoint-max(sm) {
+        font-size: 12px;
+    }
+}
+
+/*  Font size   */
+
+@include media-breakpoint-max(fhd) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-max(xxxl) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@include media-breakpoint-max(xxl) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-max(sm) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/*   Root    */
+
+.app {
+    &__navigation {
+        @include media-breakpoint-max(fhd) {
+            justify-content: left;
+
+            &-link {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @include media-breakpoint-max(xxxl) {
+        }
+
+        @include media-breakpoint-max(xxl) {
+            &-link {
+                padding: 1.5rem 1rem;
+                a {
+                    font-size: .75rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-max(xl) {
+        }
+
+        @include media-breakpoint-max(sm) {
+            justify-content: center;
+
+            &-link {
+                &.mobile-none {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+.school {
+    @include media-breakpoint-max(sm) {
+        background-size: 175%;
+    }
+}
+
+.news {
+    &__content {
+        &-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.contacts {
+    &__link {
+        @include media-breakpoint-min(fhd) {
+            align-items: end;
+        }
+
+        @include media-breakpoint-max(fhd) {
+            align-items: end;
+        }
+
+        @include media-breakpoint-max(sm) {
+            align-items: center;
+        }
+    }
+
+    &__content {
+        @include media-breakpoint-max(sm) {
+            padding: 2rem 0;
+        }
+    }
+
+    &__icon-link {
+        @include media-breakpoint-max(sm) {
+            justify-content: center;
+        }
+    }
+}

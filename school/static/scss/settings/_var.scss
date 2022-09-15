@@ -1,0 +1,17 @@
+$breakpoints: (
+    xs: 375,
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1440,
+    xxxl: 1600,
+    fhd: 1920,
+);
+
+$gradients: (
+    blue-white: $blue-white,
+    red-white: $red-white,
+    green-white: $green-white,
+    purple-orange: $purple-orange
+)

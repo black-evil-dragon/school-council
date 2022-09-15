@@ -1,0 +1,28 @@
+{% block about-school %}
+<div class="about">
+    <div class="about__header">
+        <div class="about__title">
+            <h3>Муниципальное общеобразовательное учреждение</h3>
+        </div>
+        <div class="about__subtitle">
+            <h2>«Средняя общеобразовательная школа №30»</h2>
+        </div>
+        <div class="about__subtext">
+            <p>Основана 1 сентября 1981 г.</p>
+        </div>
+    </div>
+
+    <div class="about__list">
+        {% if about %}
+        {% for aboutContent in about %}
+        <dib class="about__content">
+            <div class="content-title">{{ aboutContent.title }}</div>
+
+            <div class="content-text">{{ aboutContent.content | safe | linebreaks }}</div>
+        </dib>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

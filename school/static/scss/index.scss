@@ -1,7 +1,9 @@
 @import './settings/colors';
+@import './settings/var';
 @import './settings/mixins';
 @import './settings/ui';
 @import './settings/font';
+@import './settings/media';
 
 @import './pages/index';
 @import './pages/news';
@@ -11,14 +13,9 @@
 body,
 html {
     margin: 0;
-
-    height: 100%;
     width: 100%;
-
+    overflow-x: hidden;
     scrollbar-width: thin;
-
-    //overflow: hidden;
-    font-size: 20px;
 }
 
 * {
@@ -29,15 +26,16 @@ html {
 }
 
 .app {
+    user-select:none;
+    background-color: $grey-light2;
     &__navigation {
         display: flex;
-        justify-content: left;
+        //justify-content: left;
         align-items: center;
         width: 100%;
+        background-color: $white;
 
         &-link {
-            padding: 2rem 1rem;
-
             a {
                 color: $black;
                 @include smooth-underline;
@@ -56,7 +54,9 @@ html {
         }
     }
 
-    &__content {}
+    &__content {
+        
+    }
 
     &__transition {}
 }
