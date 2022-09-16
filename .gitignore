@@ -4,5 +4,3 @@ db.*
 migrations
 school/main/__pycache__/*
 school/school/__pycache__/*
-media
-
