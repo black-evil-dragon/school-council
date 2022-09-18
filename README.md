@@ -19,6 +19,7 @@ https://www.figma.com/file/SCBS0Bg3cWgPdPVYhWhjOM/Golgan-Semyon%2C-school-projec
 ## Патч 0.3
 
 - Полная реконструкция шаблонов
+- Новая страница с новостями и виджетами
 - Добавление медиа-стилей
 
 ## Патч 0.2
@@ -28,5 +29,4 @@ https://www.figma.com/file/SCBS0Bg3cWgPdPVYhWhjOM/Golgan-Semyon%2C-school-projec
 ### Патч 0.1
 
 - Полная реконструкция страниц, стилей, шаблонов
-
 - Добавление SCSS в проект
