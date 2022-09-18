@@ -16,9 +16,11 @@
         {% if about %}
         {% for aboutContent in about %}
         <dib class="about__content">
-            <div class="content-title">{{ aboutContent.title }}</div>
+            <div class="about__content-title">
+                <h3>{{ aboutContent.title }}</h3>
+            </div>
 
-            <div class="content-text">{{ aboutContent.content | safe | linebreaks }}</div>
+            <div class="about__content-text">{{ aboutContent.content | safe | linebreaks }}</div>
         </dib>
         {% endfor %}
         {% endif %}

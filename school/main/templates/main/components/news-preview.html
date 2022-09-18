@@ -20,7 +20,7 @@
             <h2><a href="{% url 'post_detail' pk=news.id %}" class="title-link">{{ news.title }}</a></h2>
         </div>
         <div class="news__content-text">
-            <p>{{ news.content|linebreaks }}</p>
+            {{ news.content | linebreaks }}
         </div>
 
         {% if news.image %}

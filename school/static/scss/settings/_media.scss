@@ -68,21 +68,69 @@ html {
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: .75rem;
     }
 }
 
 @include media-breakpoint-max(sm) {
     h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
         font-size: 1.75rem;
     }
 
-    h3 {
+    h2 {
         font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .mobile-none {
+        display: none !important;
+    }
+}
+
+@include media-breakpoint-max(s) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .95rem;
+    }
+
+    .mobile-none {
+        display: none !important;
+    }
+}
+
+@include media-breakpoint-max(xs) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .mobile-none {
+        display: none !important;
     }
 }
 
@@ -101,20 +149,19 @@ html {
             }
         }
 
-        @include media-breakpoint-max(xxxl) {
-        }
+        @include media-breakpoint-max(xxxl) {}
 
         @include media-breakpoint-max(xxl) {
             &-link {
                 padding: 1.5rem 1rem;
+
                 a {
                     font-size: .75rem;
                 }
             }
         }
 
-        @include media-breakpoint-max(xl) {
-        }
+        @include media-breakpoint-max(xl) {}
 
         @include media-breakpoint-max(sm) {
             justify-content: center;
@@ -128,6 +175,9 @@ html {
     }
 }
 
+
+/*    Components    */
+
 .school {
     @include media-breakpoint-max(sm) {
         background-size: 175%;
@@ -135,6 +185,16 @@ html {
 }
 
 .news {
+    &__title {
+        @include media-breakpoint-max(fhd) {
+            padding: 2.5rem 0 3rem;
+        }
+
+        @include media-breakpoint-max(s) {
+            padding: 2.5rem 0 1rem;
+        }
+    }
+
     &__content {
         &-image {
             img {
@@ -168,6 +228,67 @@ html {
     &__icon-link {
         @include media-breakpoint-max(sm) {
             justify-content: center;
+        }
+    }
+}
+
+.about {
+    &__header {
+        @include media-breakpoint-max(fhd) {
+            background-size: cover;
+            background-position-y: -4rem;
+        }
+
+        @include media-breakpoint-max(xxxl) {
+            background-position-y: -3rem;
+        }
+
+        @include media-breakpoint-max(md) {
+            background-position-y: -10rem;
+            background-size: auto;
+        }
+
+        @include media-breakpoint-max(s) {
+            background-position: 0;
+            background-size: 50rem 20rem;
+        }
+    }
+
+    &__list {
+        @include media-breakpoint-max(fhd) {
+            padding: 4rem 3rem;
+        }
+
+        @include media-breakpoint-max(md) {
+            padding: 1rem 3rem;
+        }
+    }
+
+    &__content {
+        @include media-breakpoint-max(fhd) {
+            width: 30rem;
+        }
+
+        @include media-breakpoint-max(xs) {
+            width: 20rem;
+        }
+
+    }
+}
+
+.widget {
+    &__content {
+        @include media-breakpoint-max(fhd) {
+            padding: .55rem 1rem;
+            margin: 0 .75rem;
+        }
+
+        &-emoji {
+            @include media-breakpoint-max(s) {
+                img {
+                    width: 50px;
+                }
+            }
         }
     }
 }

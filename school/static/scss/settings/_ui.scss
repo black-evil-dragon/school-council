@@ -18,6 +18,11 @@ input {
     cursor: default;
 }
 
-.mobile-none {
-    display: none;
+p {
+    a {
+        color: $blue-link;
+        &:visited {
+            color: $blue-link;
+        }
+    }
 }

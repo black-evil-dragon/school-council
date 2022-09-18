@@ -5,7 +5,7 @@ from .forms import NewsForm
 
 
 def index(request):
-    news = Post.objects.order_by('-id')[:1]
+    news = Post.objects.order_by('-id')[:3]
     contacts = Contacts.objects.order_by('-id')[:1]
     return render(request, 'main/pages/index.html', {'post': news, 'contacts': contacts})
 

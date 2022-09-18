@@ -1,7 +1,6 @@
 .news {
     &__title {
         background-color: $white;
-        padding: 2.5rem 0 3rem;
 
         h2 {
             text-align: center;
@@ -16,6 +15,8 @@
 
         &.preview {
             margin: 0;
+
+            padding: 1rem 2.5rem;
         }
 
         &-info {
@@ -49,6 +50,11 @@
 
 
         &-text {
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         &-image {}
