@@ -1,42 +1,23 @@
-/* Menu btns */
-function showOptions(current_level, target_level) {
-    document.querySelector(current_level).classList.remove('active');
-    document.querySelector(target_level).classList.add('active');
-}
-
 /* Menu panel */
 
-var acc = document.getElementsByClassName("btn-menu-head");
-var i;
+const menuButton = document.querySelector('.menu-button')
+const menuPanel = document.querySelector('.app__menu')
+const menu = document.querySelector('.menu')
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-
-    var panel = document.querySelector('.panel-menu-head')
-
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+menuButton.addEventListener("click", function () {
+    if (menuPanel.style.maxHeight) {
+        menuPanel.style.maxHeight = null;
     } else {
-        panel.style.height = 100 + '%';
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        menuPanel.style.height = `${100}%`
+        menuPanel.style.maxHeight =  `${menu.scrollHeight}px`
     }
-  });
-}
-var acc = document.getElementsByClassName("btn-menu-footer");
-var i;
+})
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+/* Menu buttons */
 
-    var panel = document.querySelector('.panel-menu-head')
+const openBurger = (event, targetPosition) => {
+    const currentMenu = event.target.parentElement.parentElement
 
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-        panel.style.height = 100 + '%';
-        panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+    currentMenu.classList.remove('_active')
+    document.getElementById(`${targetPosition}`).classList.add('_active')
 }

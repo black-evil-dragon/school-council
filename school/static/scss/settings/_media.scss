@@ -156,7 +156,7 @@ html {
                 padding: 1.5rem 1rem;
 
                 a {
-                    font-size: .75rem;
+                    font-size: .85rem;
                 }
             }
         }
@@ -179,6 +179,10 @@ html {
 /*    Components    */
 
 .school {
+    @include media-breakpoint-max(fhd) {
+        background-size: cover;
+    }
+
     @include media-breakpoint-max(sm) {
         background-size: 175%;
     }
@@ -198,7 +202,12 @@ html {
     &__content {
         &-image {
             img {
-                width: 100%;
+                @include media-breakpoint-max(fhd) {
+                    width: 80%;
+                }
+                @include media-breakpoint-max(s) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -287,6 +296,18 @@ html {
             @include media-breakpoint-max(s) {
                 img {
                     width: 50px;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    &__content {
+        button {
+            p {
+                @include media-breakpoint-max(s) {
+                    background-image: none !important;
                 }
             }
         }

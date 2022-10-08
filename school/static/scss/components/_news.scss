@@ -15,8 +15,10 @@
 
         &.preview {
             margin: 0;
-
             padding: 1rem 2.5rem;
+        }
+        &.detail {
+            padding: 1rem 2.5rem 3rem;
         }
 
         &-info {
@@ -57,7 +59,9 @@
             }
         }
 
-        &-image {}
+        &-image {
+            padding: 1rem 0 0;
+        }
 
         &-button {
             display: flex;
@@ -76,9 +80,7 @@
     }
 
     &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
 
         background-color: $white;
 

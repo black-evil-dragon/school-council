@@ -159,7 +159,7 @@ html {
     padding: 1.5rem 1rem;
   }
   .app__navigation-link a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }
 @media (max-width: 640px) {
@@ -172,6 +172,11 @@ html {
 }
 
 /*    Components    */
+@media (max-width: 1920px) {
+  .school {
+    background-size: cover;
+  }
+}
 @media (max-width: 640px) {
   .school {
     background-size: 175%;
@@ -188,8 +193,15 @@ html {
     padding: 2.5rem 0 1rem;
   }
 }
-.news__content-image img {
-  width: 100%;
+@media (max-width: 1920px) {
+  .news__content-image img {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .news__content-image img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -274,11 +286,17 @@ html {
   }
 }
 
+@media (max-width: 480px) {
+  .menu__content button p {
+    background-image: none !important;
+  }
+}
+
 .school {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   background-image: url("/static/img/b-01.png");
   background-position-y: -2rem;
   color: #fff;
@@ -310,6 +328,9 @@ html {
   margin: 0;
   padding: 1rem 2.5rem;
 }
+.news__content.detail {
+  padding: 1rem 2.5rem 3rem;
+}
 .news__content-info {
   padding: 1rem 0 0;
 }
@@ -339,6 +360,9 @@ html {
 }
 .news__content-text p:last-child {
   margin-bottom: 0;
+}
+.news__content-image {
+  padding: 1rem 0 0;
 }
 .news__content-button {
   display: flex;
@@ -385,7 +409,7 @@ html {
 .contacts__content-text p a {
   color: #fff;
 }
-.contacts__content-text p:first-child, .contacts__content-text p:last-child {
+.contacts__content-text p:first-child {
   margin: 0;
 }
 .contacts__link {
@@ -504,6 +528,122 @@ html {
   margin-bottom: 0;
 }
 
+.council {
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+.council-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.council-header__image img {
+  width: 100px;
+}
+.council-about {
+  padding: 2rem 1rem;
+}
+.council-structure {
+  color: #fff;
+  background-color: #495464;
+  padding: 2rem 1rem;
+}
+.council-structure__title {
+  text-align: center;
+}
+.council-structure__council {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #000;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+.council-structure__council-title {
+  text-align: center;
+}
+.council-structure__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.council-structure__ministry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #000;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+.council-structure__ministry p {
+  text-align: center;
+}
+.council-helper {
+  padding: 2rem 1rem;
+}
+.council-helper__title .title {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  transition: height 0.5s ease-in-out;
+}
+.menu__content {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+  transform: translateX(15rem);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  padding: 2rem 0;
+}
+.menu__content button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #fff;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.menu__content button p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.4s;
+}
+.menu__content button p:hover {
+  background-size: 100% 2px;
+}
+.menu__content._active {
+  opacity: 1;
+  transform: translateX(0rem);
+  pointer-events: all;
+}
+
 body,
 html {
   margin: 0;
@@ -552,4 +692,15 @@ html {
   justify-content: end;
   flex: 1;
   padding-right: 1.5rem;
+}
+.app__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: #495464;
 }

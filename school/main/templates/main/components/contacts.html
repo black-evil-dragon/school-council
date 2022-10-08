@@ -1,6 +1,5 @@
 {% load static %}
 
-{% block contacts %}
 <div class="contacts">
     <div class="contacts__title mobile-none">
         <h3>Контакты</h3>
@@ -9,7 +8,7 @@
         <div class="contacts__content-text mobile-none">
             {% if contacts %}
             {% for contact in contacts %}
-            <p>{{ contact.text | safe | linebreaks }}</p>
+            {{ contact.text | safe | linebreaks }}
             {% endfor %}
             {% endif %}
         </div>
@@ -17,12 +16,10 @@
             <a href="/">Главная</a>
             <a href="news">Новости</a>
             <a href="school/about">О школе</a>
-            <button class="link-a">Меню</button>
-            <a href="" class="scrollTop">Наверх</a>
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth'})">Наверх</button>
         </div>
     </div>
     <div class="contacts__icon-link">
         <a href="https://vk.com/samoypravlenie30"><img src="{% static 'img/vk-64.png' %}" alt=""></a>
     </div>
 </div>
-{% endblock %}

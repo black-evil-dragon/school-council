@@ -1,0 +1,95 @@
+.council {
+    background-color: $white;
+
+    margin-top: .5rem;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 2rem 1rem;
+
+        &__wrapper {}
+
+        &__title {
+            h2 {}
+        }
+
+        &__subtitle {
+            h3 {}
+        }
+
+        &__image {
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    &-about {
+        padding: 2rem 1rem;
+    }
+
+    &-structure {
+        color: $white;
+        background-color: $grey-background;
+
+        padding: 2rem 1rem;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__council {
+            width: max-content;
+            margin: auto;
+
+            background-color: $white;
+            border-radius: 1rem;
+
+            color: $black;
+            text-align: center;
+
+            padding: 1rem 2rem;
+
+            &-title {
+                text-align: center;
+            }
+        }
+
+        &__wrapper {
+            @include flex-center;
+
+            flex-wrap: wrap;
+        }
+
+        &__ministry {
+            @include flex-center;
+
+            width: 12rem;
+            height: 6rem;
+
+            background-color: $white;
+            border-radius: 1rem;
+
+            color: $black;
+            text-align: center;
+
+            padding: 1rem 2rem;
+            margin: 1rem;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    &-helper {
+        padding: 2rem 1rem;
+        &__title {
+            .title {
+                text-align: center;
+            }
+        }
+    }
+}

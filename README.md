@@ -11,6 +11,11 @@ https://www.figma.com/file/SCBS0Bg3cWgPdPVYhWhjOM/Golgan-Semyon%2C-school-projec
 
 ## Добавления
 
+## Патч 0.5
+
+- Добавлена страница ШУСС'а
+- Исправление недочетов
+
 ## Патч 0.4
 
 - Добавлена страница с главной информацией о школе
@@ -26,7 +31,7 @@ https://www.figma.com/file/SCBS0Bg3cWgPdPVYhWhjOM/Golgan-Semyon%2C-school-projec
 
 - Главная страница готова
 
-### Патч 0.1
+## Патч 0.1
 
 - Полная реконструкция страниц, стилей, шаблонов
 - Добавление SCSS в проект

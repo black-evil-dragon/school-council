@@ -8,6 +8,10 @@
 @import './pages/index';
 @import './pages/news';
 @import './pages/school-about';
+@import './pages/council';
+
+
+@import './components/menu';
 
 
 body,
@@ -26,8 +30,9 @@ html {
 }
 
 .app {
-    user-select:none;
+    user-select: none;
     background-color: $grey-light2;
+
     &__navigation {
         display: flex;
         //justify-content: left;
@@ -54,9 +59,19 @@ html {
         }
     }
 
-    &__content {
-        
+    &__menu {
+        @include flex-center;
+        position: relative;
+        width: 100%;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+
+        background-color: $grey-background;
     }
+
+    &__content {}
 
     &__transition {}
 }

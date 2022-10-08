@@ -1,0 +1,70 @@
+{% load static %}
+
+<div class="menu">
+    <!-- level 1 -->
+    <div class="menu__content _active" id="1.1">
+        <button onclick="document.location.href = '/'">
+            <p>Главная</p>
+        </button><br>
+        <button onclick="document.location.href = '/news'">
+            <p>Новости</p>
+        </button><br>
+        <button onclick="document.location.href = '/about/council'">
+            <p>ШУСС</p>
+        </button><br>
+        <button onclick="document.location.href = '/about/school'">
+            <p>Школа</p>
+        </button><br>
+        <button>
+            <p>Связаться</p>
+        </button><br>
+        <button onclick="openBurger(event, '2.1')">
+            <p>To level 2 option 1</p>
+        </button><br>
+        <button onclick="openBurger(event, '2.2')">
+            <p>To level 2 option 2</p>
+        </button><br>
+    </div>
+
+    <!-- level 2 -->
+
+    <div class="menu__content" id="2.1">
+        <button onclick="openBurger(event, '3.1')"><p>To level 3 option 1</p></button><br>
+        <button onclick="openBurger(event, '3.2')"><p>To level 3 option 2</p></button><br>
+        <button onclick="openBurger(event, '1.1')"><p>Back</p></button><br>
+    </div>
+
+    <div class="menu__content" id="2.2">
+        <button onclick="openBurger(event, '3.3')"><p>To level 3 option 3</p></button><br>
+        <button onclick="openBurger(event, '3.4')"><p>To level 3 option 4</p></button><br>
+        <button onclick="openBurger(event, '1.1')">
+            <p>Back</p>
+        </button><br>
+    </div>
+
+    <!-- level 3 -->
+
+    <div class="menu__content" id="3.1">
+        <button onclick="openBurger(event, '1.1')">
+            <p>Поздравляю! Вы дошли до конца бургер-меню и теперь можете вернутся в начало :)</p>
+        </button><br>
+    </div>
+
+    <div class="menu__content" id="3.2">
+        <button onclick="openBurger(event, '1.1')">
+            <p>Поздравляю! Вы дошли до конца бургер-меню и теперь можете вернутся в начало :)</p>
+        </button><br>
+    </div>
+
+    <div class="menu__content" id="3.3">
+        <button onclick="openBurger(event, '1.1')">
+            <p>Поздравляю! Вы дошли до конца бургер-меню и теперь можете вернутся в начало :)</p>
+        </button><br>
+    </div>
+
+    <div class="menu__content" id="3.4">
+        <button onclick="openBurger(event, '1.1')">
+            <p>Поздравляю! Вы дошли до конца бургер-меню и теперь можете вернутся в начало :)</p>
+        </button><br>
+    </div>
+</div>

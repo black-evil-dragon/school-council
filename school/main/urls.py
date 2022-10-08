@@ -5,9 +5,9 @@ from .views import BlogListView, BlogDetailView
 
 urlpatterns = [
     path('', views.index),
-    path('school/about', views.about),
+    path('about/school', views.about),
+    path('about/council', views.council),
     path('news', views.news),
-    path('menu', views.menu),
     path('ghost', views.ghost),
 
     path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),

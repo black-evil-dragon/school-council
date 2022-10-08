@@ -1,0 +1,15 @@
+{% extends 'main/template/base.html' %}
+
+{% block title %}
+ШУСС
+{% endblock %}
+
+{% block content %}
+
+<div class="council">
+    {% include 'main/components/council-header.html' %}
+    {% include 'main/components/council-structure.html' %}
+    {% include 'main/components/council-helper.html' %}
+</div>
+
+{% endblock %}

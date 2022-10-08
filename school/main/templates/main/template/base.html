@@ -24,35 +24,21 @@
 
 <body id="top" class="app">
 
-    <div class="app__navigation">
-        <div class="app__navigation-link">
-            <a id="nav-link" href="/">Главная</a>
-        </div>
+    {% include 'main/components/ui/header.html' %}
 
-        <div class="app__navigation-link">
-            <a id="nav-link" href="/news">Новости</a>
-        </div>
-
-        <div class="app__navigation-link">
-            <a href="">Меню</a>
-        </div>
-
-        <div class="app__navigation-link mobile-none">
-            <a id="nav-link" href="/school/about">О школе</a>
-        </div>
-
-        <div class="app__navigation-link mobile-none">
-            <a id="nav-link">Связаться</a>
-        </div>
+    <div class="app__menu">
+        {% include 'main/components/ui/menu.html' %}
     </div>
 
     <div class="app__content">
         {% block content %}
         {% endblock content %}
     </div>
+
     <div class="app__transition"></div>
 
     <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
 </body>
 
 </html>
