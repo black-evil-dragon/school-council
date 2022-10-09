@@ -15,6 +15,8 @@ https://www.figma.com/file/SCBS0Bg3cWgPdPVYhWhjOM/Golgan-Semyon%2C-school-projec
 
 - Добавлена страница ШУСС'а
 - Исправление недочетов
+- Добавление меню
+- Полный адаптивный дизайн
 
 ## Патч 0.4
 

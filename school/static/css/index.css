@@ -116,13 +116,13 @@ html {
 }
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   p {
     font-size: 0.95rem;
@@ -137,9 +137,6 @@ html {
   }
   h2 {
     font-size: 1.25rem;
-  }
-  h3 {
-    font-size: 1rem;
   }
   .mobile-none {
     display: none !important;
@@ -289,6 +286,17 @@ html {
 @media (max-width: 480px) {
   .menu__content button p {
     background-image: none !important;
+  }
+}
+
+@media (max-width: 1920px) {
+  .council-helper, .council-header, .council-structure {
+    padding: 3rem 4rem;
+  }
+}
+@media (max-width: 1440px) {
+  .council-helper, .council-header, .council-structure {
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -535,18 +543,13 @@ html {
 .council-header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 1rem;
 }
 .council-header__image img {
   width: 100px;
 }
-.council-about {
-  padding: 2rem 1rem;
-}
 .council-structure {
   color: #fff;
   background-color: #495464;
-  padding: 2rem 1rem;
 }
 .council-structure__title {
   text-align: center;
@@ -586,9 +589,6 @@ html {
 }
 .council-structure__ministry p {
   text-align: center;
-}
-.council-helper {
-  padding: 2rem 1rem;
 }
 .council-helper__title .title {
   text-align: center;

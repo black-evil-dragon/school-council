@@ -7,8 +7,6 @@
         display: flex;
         justify-content: space-between;
 
-        padding: 2rem 1rem;
-
         &__wrapper {}
 
         &__title {
@@ -27,14 +25,12 @@
     }
 
     &-about {
-        padding: 2rem 1rem;
     }
 
     &-structure {
         color: $white;
         background-color: $grey-background;
 
-        padding: 2rem 1rem;
 
         &__title {
             text-align: center;
@@ -85,7 +81,6 @@
     }
 
     &-helper {
-        padding: 2rem 1rem;
         &__title {
             .title {
                 text-align: center;

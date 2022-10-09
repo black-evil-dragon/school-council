@@ -96,15 +96,15 @@ html {
 
 @include media-breakpoint-max(s) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     p {
@@ -123,10 +123,6 @@ html {
 
     h2 {
         font-size: 1.25rem;
-    }
-
-    h3 {
-        font-size: 1rem;
     }
 
     .mobile-none {
@@ -310,6 +306,18 @@ html {
                     background-image: none !important;
                 }
             }
+        }
+    }
+}
+
+.council {
+    &-helper, &-header, &-structure {
+        @include media-breakpoint-max(fhd) {
+            padding: 3rem 4rem;
+        }
+
+        @include media-breakpoint-max(xxl) {
+            padding: 2rem 1.5rem;
         }
     }
 }
