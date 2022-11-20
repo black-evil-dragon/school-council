@@ -1,0 +1,46 @@
+.menu {
+    @include flex-center;
+
+    position: relative;
+
+    width: 100%;
+    height: 20rem;
+
+    transition: height .5s ease-in-out;
+
+    &__content {
+        position: absolute;
+        opacity: 0;
+
+        @include flex-center;
+        flex-direction: column;
+
+        pointer-events: none;
+
+        transform: translateX(15rem);
+        transition: transform .5s ease, opacity .5s ease;
+
+        padding: 2rem 0;
+
+        button {
+            width: max-content;
+
+            color: $white;
+            text-align: center;
+
+            margin: .5rem 0;
+
+            p {
+                width: max-content;
+                margin: auto;
+                @include smooth-underline;
+            }
+        }
+
+        &._active {
+            opacity: 1;
+            transform: translateX(0rem);
+            pointer-events: all;
+        }
+    }
+}

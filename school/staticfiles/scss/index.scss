@@ -1,0 +1,77 @@
+@import './settings/colors';
+@import './settings/var';
+@import './settings/mixins';
+@import './settings/ui';
+@import './settings/font';
+@import './settings/media';
+
+@import './pages/index';
+@import './pages/news';
+@import './pages/school-about';
+@import './pages/council';
+
+
+@import './components/menu';
+
+
+body,
+html {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.app {
+    user-select: none;
+    background-color: $grey-light2;
+
+    &__navigation {
+        display: flex;
+        //justify-content: left;
+        align-items: center;
+        width: 100%;
+        background-color: $white;
+
+        &-link {
+            a {
+                color: $black;
+                @include smooth-underline;
+            }
+
+            &:first-child {
+                padding-left: 1.5rem;
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: end;
+                flex: 1;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+    &__menu {
+        @include flex-center;
+        position: relative;
+        width: 100%;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+
+        background-color: $grey-background;
+    }
+
+    &__content {}
+
+    &__transition {}
+}

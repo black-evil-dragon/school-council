@@ -1,0 +1,28 @@
+input,
+button {
+    background-color: unset;
+    border: none;
+    text-decoration: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+input {
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+}
+
+p {
+    a {
+        color: $blue-link;
+        &:visited {
+            color: $blue-link;
+        }
+    }
+}

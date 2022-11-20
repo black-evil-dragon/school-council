@@ -1,0 +1,63 @@
+.contacts {
+    color: $white;
+    background-color: $grey-background;
+
+    padding: 1rem 2rem;
+
+    &__title {
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-text {
+            p {
+                a {
+                    color: $white;
+                }
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: start;
+        //align-items: end;
+        flex-direction: column;
+
+        flex: 1;
+
+        a, button {
+            color: $white;
+            text-decoration: none;
+            text-align: right;
+
+            width: max-content;
+
+            font-size: 1rem;
+
+            padding: 0 0 .5rem;
+
+            @include smooth-underline;
+        }
+    }
+
+    &__icon-link {
+        display: flex;
+        img {
+            width: 2rem;
+
+            transition: width .75s ease;
+
+            &:hover {
+                width: 2.5rem;
+            }
+        }
+    }
+}
