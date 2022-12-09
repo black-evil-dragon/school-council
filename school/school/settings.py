@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9upf#(^61lghj28x)rjcxs)uv*i^x!@5mcof1ourd0%i$mwu6n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'blackevildragon.pythonanywhere.com',
