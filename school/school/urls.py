@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-handler404 = "school.views.page_not_found_view"
+handler404 = "school.views.error_handler_404"
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -14,7 +14,10 @@ SECRET_KEY = '9upf#(^61lghj28x)rjcxs)uv*i^x!@5mcof1ourd0%i$mwu6n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['blackevildragon.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'blackevildragon.pythonanywhere.com',
+    'localhost'
+]
 
 
 
