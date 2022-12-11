@@ -1,7 +1,7 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import AboutSchool, Contacts, News, Post, WidgetLinks
-from .forms import NewsForm
+from .models import AboutSchool, Contacts, Post, WidgetLinks
+
 
 def index(request):
     news = Post.objects.order_by('-id')[:3]

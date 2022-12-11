@@ -26,18 +26,6 @@ class Post(models.Model):
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
 
-class News(models.Model):
-    title = models.CharField('Заголовок', max_length=50)
-    content = models.TextField('Содержимое')
-    date = models.DateField(_("Date"), default=datetime.now, blank=True)
-    time = models.TimeField(default=default_start_time)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'Пост'
-        verbose_name_plural = 'Посты'
 
 class AboutSchool(models.Model):
     id = models.PositiveIntegerField('Порядковый номер', primary_key=True, unique=True)
