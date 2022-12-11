@@ -14,6 +14,12 @@
 @import './components/menu';
 
 
+::selection {
+  color: $white;
+  background: $black;
+}
+
+
 body,
 html {
     margin: 0;
@@ -30,7 +36,7 @@ html {
 }
 
 .app {
-    user-select: none;
+    user-select: text;
     background-color: $grey-light2;
 
     &__navigation {
