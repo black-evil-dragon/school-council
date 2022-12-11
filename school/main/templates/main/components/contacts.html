@@ -6,10 +6,10 @@
     </div>
     <div class="contacts__content">
         <div class="contacts__content-text mobile-none">
-            {% if main_contacts %}
-            {% for contact in contacts %}
-            {{ contact.text | safe | linebreaks }}
-            {% endfor %}
+            {% if contacts %}
+                {% for contact in contacts %}
+                {{ contact.text | safe | linebreaks }}
+                {% endfor %}
             {% endif %}
         </div>
         <div class="contacts__link">

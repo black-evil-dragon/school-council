@@ -5,7 +5,7 @@
         <h2>Новости</h2>
     </div>
 
-    {% if main_post %}
+    {% if post %}
         {% for news in post %}
         <div class="news__content preview">
             <div class="news__content-info">
@@ -23,9 +23,9 @@
             </div>
 
             {% if news.image %}
-            <div class="news__content-image">
-                <img src="{{ news.image.url }}">
-            </div>
+                <div class="news__content-image">
+                    <img src="{{ news.image.url }}">
+                </div>
             {% else %}
             {% endif %}
         </div>
