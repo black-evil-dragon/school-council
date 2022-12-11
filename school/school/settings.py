@@ -1,17 +1,17 @@
 from pathlib import Path
 import os
-from config import CONFIG_DEBUG
+import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9upf#(^61lghj28x)rjcxs)uv*i^x!@5mcof1ourd0%i$mwu6n'
+SECRET_KEY = config.SECRET
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True if CONFIG_DEBUG else False
+DEBUG = True if config.CONFIG_DEBUG else False
 
 
 ALLOWED_HOSTS = [
