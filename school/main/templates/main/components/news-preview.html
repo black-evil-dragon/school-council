@@ -5,31 +5,31 @@
         <h2>Новости</h2>
     </div>
 
-    {% if post %}
-    {% for news in post %}
-    <div class="news__content preview">
-        <div class="news__content-info">
-            <p>
-                <span id="creator">{{ news.creator }}</span>
-                <span id="time">{{ news.time }}</span>
-                <span id="date">{{ news.date|date:"d.m.Y" }}</span>
-            </p>
-        </div>
-        <div class="news__content-title">
-            <h2><a href="{% url 'post_detail' pk=news.id %}" class="title-link">{{ news.title }}</a></h2>
-        </div>
-        <div class="news__content-text">
-            {{ news.content | linebreaks }}
-        </div>
+    {% if main_post %}
+        {% for news in post %}
+        <div class="news__content preview">
+            <div class="news__content-info">
+                <p>
+                    <span id="creator">{{ news.creator }}</span>
+                    <span id="time">{{ news.time }}</span>
+                    <span id="date">{{ news.date|date:"d.m.Y" }}</span>
+                </p>
+            </div>
+            <div class="news__content-title">
+                <h2><a href="{% url 'post_detail' pk=news.id %}" class="title-link">{{ news.title }}</a></h2>
+            </div>
+            <div class="news__content-text">
+                {{ news.content | linebreaks }}
+            </div>
 
-        {% if news.image %}
-        <div class="news__content-image">
-            <img src="{{ news.image.url }}">
+            {% if news.image %}
+            <div class="news__content-image">
+                <img src="{{ news.image.url }}">
+            </div>
+            {% else %}
+            {% endif %}
         </div>
-        {% else %}
-        {% endif %}
-    </div>
-    {% endfor %}
+        {% endfor %}
     {% endif %}
 
     <div class="news__button">
