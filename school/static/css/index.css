@@ -6,6 +6,12 @@ button {
   text-decoration: none;
 }
 
+a,
+input,
+button {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -781,13 +787,6 @@ html {
   width: 100%;
   overflow-x: hidden;
   scrollbar-width: thin;
-}
-
-img, a {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 * {

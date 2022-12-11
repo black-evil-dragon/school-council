@@ -2,7 +2,13 @@ input,
 button {
     background-color: unset;
     border: none;
-    text-decoration: none
+    text-decoration: none;
+}
+
+a,
+input,
+button {
+    cursor: pointer;
 }
 
 h1,
@@ -21,6 +27,7 @@ input {
 p {
     a {
         color: $blue-link;
+
         &:visited {
             color: $blue-link;
         }
