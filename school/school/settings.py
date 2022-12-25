@@ -16,7 +16,8 @@ DEBUG = True if config.CONFIG_DEBUG else False
 
 ALLOWED_HOSTS = [
     'blackevildragon.pythonanywhere.com',
-    'localhost'
+    'localhost',
+    '192.168.0.10'
 ]
 
 

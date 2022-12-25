@@ -1,16 +1,16 @@
 <div class="widget">
     <div class="widget__wrapper">
-        {% if main_widgets %}
-        {% for widget in widgets %}
-        <div class="widget__content {{widget.gradient}}">
-            <div class="widget__content-title">
-                <p>{{widget.title}}</p>
-            </div>
-            <div class="widget__content-emoji">
-                <img src="{{ widget.image.url }}" alt="">
-            </div>
-        </div>
-        {% endfor %}
+        {% if widgets %}
+            {% for widget in widgets %}
+                <div class="widget__content {{widget.gradient}}" onclick="document.location.href = '/article/{{ widget.link }}'">
+                    <div class="widget__content-title">
+                        <p>{{widget.title}}</p>
+                    </div>
+                    <div class="widget__content-emoji">
+                        <img src="{{ widget.image.url }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
         {% endif %}
     </div>
 </div>

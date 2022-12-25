@@ -8,9 +8,16 @@ $grey-text: #847D7D;
 $grey-light: #a39f9f;
 $grey-light2: #E5E5E5;
 
-$blue-white: linear-gradient(80.29deg, #0E1978 6%, rgba(0, 26, 255, 0.588542) 52.48%, rgba(0, 212, 255, 0.37) 96.82%);
-$green-white: linear-gradient(80.29deg, #056D42 6%, rgba(13, 168, 66, 0.588542) 52.48%, rgba(70, 255, 133, 0.37) 96.82%);
-$red-white: linear-gradient(80.29deg, #700619 6%, rgba(208, 0, 0, 0.588542) 52.48%, rgba(255, 255, 255, 0.37) 96.82%);
-$purple-orange: linear-gradient(80.29deg, #833AB4 6%, rgba(253, 29, 29, 0.588542) 52.48%, rgba(252, 176, 69, 0.37) 96.82%);
+$blue-white: linear-gradient(60deg, #000012 0%, #0009a7 50%, #00d3ff 100%);
+$blue-white-hover: linear-gradient(-45deg, #000c7a 5%, #0044ff8c 50%, #00d9ff 95%);
+
+$green-white: linear-gradient(60deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+$green-white-hover: linear-gradient(-45deg, #00c5ab 0%, rgba(253,187,45,1) 100%);
+
+$red-white: linear-gradient(60deg, rgba(122,0,0,1) 0%, rgba(182, 24, 24, 0.849) 35%, rgba(255,255,255,1) 100%);
+$red-white-hover: linear-gradient(-45deg, rgb(82, 1, 1) 0%, rgba(161, 0, 0, 0.849) 35%, rgb(255, 93, 93) 100%);
+
+$purple-orange: linear-gradient(60deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+$purple-orange-hover: linear-gradient(-45deg, rgba(63,94,251,1) 15%, rgba(252,70,107,1) 90%);
 
 

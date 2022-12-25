@@ -1,0 +1,18 @@
+{% extends 'main/template/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="article">
+    <div class="article__title">
+        {% block article_title %}
+        {% endblock article_title %}
+    </div>
+    <div class="article__content">
+        {% block article_content %}
+        {% endblock article_content %}
+    </div>
+</div>
+
+{% endblock content %}

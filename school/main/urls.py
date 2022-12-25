@@ -9,8 +9,11 @@ urlpatterns = [
     path('about/council', views.council),
     path('news', views.news),
     path('ghost', views.ghost),
+    path('reach', views.reach),
 
     path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),
     path('', BlogListView.as_view(), name='news'),
+
+    path('article/<slug:link>/', views.widget)
 ]
 

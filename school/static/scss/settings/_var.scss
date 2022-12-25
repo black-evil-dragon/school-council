@@ -7,12 +7,24 @@ $breakpoints: (
     xl: 1280,
     xxl: 1440,
     xxxl: 1600,
-    fhd: 1920,
+    fhd: 3600,
 );
 
 $gradients: (
-    blue-white: $blue-white,
-    red-white: $red-white,
-    green-white: $green-white,
-    purple-orange: $purple-orange
+    blue-white: (
+        hover: $blue-white-hover,
+        main: $blue-white
+    ),
+    red-white: (
+        hover: $red-white-hover,
+        main: $red-white
+    ),
+    green-white: (
+        hover: $green-white-hover,
+        main: $green-white
+    ),
+    purple-orange: (
+        hover: $purple-orange-hover,
+        main: $purple-orange
+    )
 )

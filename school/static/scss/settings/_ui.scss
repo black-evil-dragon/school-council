@@ -32,3 +32,39 @@ p {
         }
     }
 }
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    display: flex;
+
+    backdrop-filter: blur(10px);
+
+    margin: auto;
+
+
+    &__content {
+        @include flex-center;
+        flex-direction: column;
+
+        background: $black;
+        color: $white;
+        border-radius: 1rem;
+
+        width: 35rem;
+
+        margin: auto;
+        padding: 2rem;
+
+        &-titel {}
+
+        &-text {}
+    }
+
+    &.close {
+        display: none;
+    }
+}

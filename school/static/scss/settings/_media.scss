@@ -13,11 +13,11 @@ html {
     }
 
     @include media-breakpoint-max(lg) {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     @include media-breakpoint-max(sm) {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -71,9 +71,6 @@ html {
         font-size: 1.25rem;
     }
 
-    p {
-        font-size: .75rem;
-    }
 }
 
 @include media-breakpoint-max(sm) {
@@ -171,16 +168,19 @@ html {
     }
 }
 
+.modal {
+    @include media-breakpoint-max(s) {
+        &__content {
+            width: 25rem;
+        }
+    }
+}
 
 /*    Components    */
 
 .school {
     @include media-breakpoint-max(fhd) {
         background-size: cover;
-    }
-
-    @include media-breakpoint-max(sm) {
-        background-size: 175%;
     }
 }
 

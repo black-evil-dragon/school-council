@@ -7,31 +7,45 @@
         background-color: $white;
         overflow-y: auto;
         scrollbar-width: none;
+        user-select: none;
 
-        padding: 1.25rem 1rem;
+        padding: 2rem 1rem;
     }
 
     &__content {
         display: flex;
+        cursor: pointer;
 
         border-radius: 1.25rem;
 
         &-title {
             @include flex-center;
+            cursor: pointer;
+            z-index: 2;
+
             p {
                 width: min-content;
+                min-width: 10rem;
+
+                cursor: pointer;
                 color: $white;
                 text-align: center;
+
                 font-size: .95rem;
+
             }
 
             padding-right: 1.5rem;
         }
 
         &-emoji {
-            @include flex-center
+            @include flex-center;
+            z-index: 2;
         }
 
-        @include setColor
+
+
+
+        @include WidgetSetColor
     }
 }
