@@ -1,4 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.menu__content {
+  position: absolute;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  pointer-events: none;
+  -webkit-transform: translateX(15rem);
+          transform: translateX(15rem);
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  padding: 2rem 0;
+}
+.menu__content button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #fff;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.menu__content button p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size 0.4s;
+  transition: background-size 0.4s;
+}
+.menu__content button p:hover {
+  background-size: 100% 2px;
+}
+.menu__content._active {
+  opacity: 1;
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+  pointer-events: all;
+}
+
 input,
 button {
   background-color: unset;
@@ -36,6 +109,7 @@ p a:visited {
   width: 100%;
   height: 100%;
   top: 0;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,7 +692,7 @@ html {
   position: absolute;
   content: "";
   inset: 0;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   background-image: linear-gradient(-45deg, #000c7a 5%, rgba(0, 68, 255, 0.5490196078) 50%, #00d9ff 95%);
   z-index: 1;
   opacity: 0;
@@ -649,7 +723,7 @@ html {
   position: absolute;
   content: "";
   inset: 0;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   background-image: linear-gradient(-45deg, rgb(82, 1, 1) 0%, rgba(161, 0, 0, 0.849) 35%, rgb(255, 93, 93) 100%);
   z-index: 1;
   opacity: 0;
@@ -680,7 +754,7 @@ html {
   position: absolute;
   content: "";
   inset: 0;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   background-image: linear-gradient(-45deg, #00c5ab 0%, rgb(253, 187, 45) 100%);
   z-index: 1;
   opacity: 0;
@@ -711,7 +785,7 @@ html {
   position: absolute;
   content: "";
   inset: 0;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   background-image: linear-gradient(-45deg, rgb(63, 94, 251) 15%, rgb(252, 70, 107) 90%);
   z-index: 1;
   opacity: 0;
@@ -884,77 +958,29 @@ html {
   text-align: center;
 }
 
-.menu {
+.reach {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 0.5rem;
+}
+.reach__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  width: 100%;
-  height: 20rem;
-  -webkit-transition: height 0.5s ease-in-out;
-  transition: height 0.5s ease-in-out;
+  padding: 1rem 0;
 }
-.menu__content {
-  position: absolute;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  pointer-events: none;
-  -webkit-transform: translateX(15rem);
-          transform: translateX(15rem);
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
-  padding: 2rem 0;
+.reach__text {
+  padding: 0 2rem;
 }
-.menu__content button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  color: #fff;
-  text-align: center;
-  margin: 0.5rem 0;
-}
-.menu__content button p {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: auto;
-  text-decoration: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
+.reach__image img {
+  width: 10rem;
+  border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
-  -webkit-transition: background-size 0.4s;
-  transition: background-size 0.4s;
-}
-.menu__content button p:hover {
-  background-size: 100% 2px;
-}
-.menu__content._active {
-  opacity: 1;
-  -webkit-transform: translateX(0rem);
-          transform: translateX(0rem);
-  pointer-events: all;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 
 ::-moz-selection {
@@ -1002,6 +1028,10 @@ html {
 }
 .app__navigation-link a {
   color: #000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-decoration: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
   background-image: linear-gradient(currentColor, currentColor);

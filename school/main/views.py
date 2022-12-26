@@ -24,7 +24,10 @@ def council(request):
     return render(request, 'main/pages/council.html')
 
 def widget(request, link):
-    return render(request, f'main/pages/articles/{link}.html')
+    if link != 'ghost':
+        return render(request, f'main/pages/articles/{link}.html')
+    else:
+        return render(request, f'main/pages/ghost.html')
 
 def reach(request):
     return render(request, f'main/pages/reach.html')

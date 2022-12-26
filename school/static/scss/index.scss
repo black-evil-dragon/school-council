@@ -10,9 +10,8 @@
 @import './pages/school-about';
 @import './pages/council';
 @import './pages/error';
+@import './pages/reach';
 
-
-@import './components/menu';
 
 
 ::selection {
@@ -50,6 +49,7 @@ html {
         &-link {
             a {
                 color: $black;
+                user-select: none;
                 @include smooth-underline;
             }
 

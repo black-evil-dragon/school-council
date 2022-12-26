@@ -1,0 +1,32 @@
+.reach {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $white;
+
+    padding: 2rem 1rem;
+    margin-top: 0.5rem;
+
+    &__content {
+        display: flex;
+        padding: 1rem 0;
+    }
+
+    &__text {
+        padding: 0 2rem;
+    }
+
+    &__image {
+
+        img {
+            width: 10rem;
+
+            border-radius: 50%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 50%;
+        }
+    }
+}

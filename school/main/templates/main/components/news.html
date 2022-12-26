@@ -18,7 +18,7 @@
 
                 {% if news.image %}
                     <div class="news__content-image">
-                        <img src="{{ news.image.url }}">
+                        <a href="{{ news.image.url }}"><img src="{{ news.image.url }}"></a>
                     </div>
                 {% else %}
                 {% endif %}
